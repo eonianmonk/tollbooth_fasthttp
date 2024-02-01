@@ -2,7 +2,8 @@ package main
 
 import (
 	"time"
-	"tollbooth_fasthttp"
+
+	"github.com/eonianmonk/tollbooth_fasthttp"
 
 	"github.com/didip/tollbooth"
 	tlimiter "github.com/didip/tollbooth/limiter"

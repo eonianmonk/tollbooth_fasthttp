@@ -1,4 +1,4 @@
-module tollbooth_fasthttp
+module github.com/eonianmonk/tollbooth_fasthttp
 
 go 1.21.3
 
