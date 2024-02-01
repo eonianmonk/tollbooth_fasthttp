@@ -2,9 +2,11 @@ package main
 
 import (
 	"time"
+	"tollbooth_fasthttp"
 
 	"github.com/didip/tollbooth"
-	"github.com/didip/tollbooth/thirdparty/tollbooth_fasthttp"
+	tlimiter "github.com/didip/tollbooth/limiter"
+
 	"github.com/valyala/fasthttp"
 )
 
@@ -19,7 +21,8 @@ func main() {
 	}
 
 	// Create a limiter struct.
-	limiter := tollbooth.NewLimiter(1, time.Second)
+	expOpts := tlimiter.ExpirableOptions{DefaultExpirationTTL: time.Second}
+	limiter := tollbooth.NewLimiter(1, &expOpts)
 
 	fasthttp.ListenAndServe(":4444", tollbooth_fasthttp.LimitHandler(requestHandler, limiter))
 }

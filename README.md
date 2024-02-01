@@ -3,9 +3,9 @@
 [Fasthttp](https://github.com/valyala/fasthttp) middleware for rate limiting HTTP requests.
 
 
-## NOTE:
+## Version:
 
-This shim uses `v1.0.0` API.
+This shim uses `v7` API.
 
 
 ## Five Minutes Tutorial
